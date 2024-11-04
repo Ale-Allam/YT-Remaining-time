@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="index.css">
+  <title>YouTube Player with Remaining Time</title>
+</head>
+
+<body>
+  <!-- Controls -->
+  <header>
+    <div class="logo-container">
+      <div class="logo">
+        <img src="YT_logo.webp" alt="YT-logo">
+      </div>
+      <div>
+        <h1>Remaining time</h1>
+      </div>
+    </div>
+    <div>
+      <button id="loadButton" class="learn-more button">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Load Video</span>
+      </button>
+      <input type="text" name="text" class="input" id="videoInput"
+        placeholder="Paste YouTube URL here (e.g., https://www.youtube.com/watch?v=Ns12ALe8aqI)">
+    </div>
+    <div id="controls">
+      <div id="sizeControls">
+        <select id="playerSize">
+          <option value="small">Small (640x360)</option>
+          <option value="medium">Medium (854x480)</option>
+          <option value="large">Large (1280x720)</option>
+          <option value="custom">Custom Size</option>
+        </select>
+        <input type="number" id="customWidth" placeholder="Width" style="display: none; width: 80px; padding: 8px;"
+          min="200">
+        <input type="number" id="customHeight" placeholder="Height" style="display: none; width: 80px; padding: 8px;"
+          min="200">
+        <button id="applySize" class="button" style="display: none;">Apply Size</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="yt-emainingtime">
+    <div id="errorMessage" class="error"></div>
+
+    <!-- YouTube Player container with wrapper -->
+    <div id="playerWrapper">
+      <div id="player"></div>
+      <div id="remainingTime">Remaining: --:--</div>
+    </div>
+  </div>
+
+  <script src="index.js">
+  </script>
+</body>
+
+</html>
